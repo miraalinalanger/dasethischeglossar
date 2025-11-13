@@ -42,18 +42,9 @@ body {
   color: #111;
 }
 
-/* Google Doc Embed */
-.doc-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .doc-embed {
   width: 100%;
-  height: 90vh; /* nimmt fast den ganzen Bildschirm ein */
-  border: none;
+  height: 100vh;
 }
 
 /* Mobile Anpassungen */
