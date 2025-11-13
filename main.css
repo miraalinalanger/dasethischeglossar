@@ -42,9 +42,15 @@ body {
 /* GOOGLE DOC Styling */
 
 .doc-container {
-  width: 100%;
-  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;    /* volle Browserbreite */
+  height: 100vh;   /* volle Browserhöhe */
   border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* Mobile Ansicht */
