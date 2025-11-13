@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "AetherMono";
+  src: url("fonts/AetherMono-A.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Typewriter-Schrift für alles */
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "AetherMono";
   margin: 0;
   background-color: #fff;
   color: #111;
