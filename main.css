@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  font-family: "AetherMono", monospace;
+  font-family: "Palatino Linotype", Palatino, serif;
   background-color: #fff;
   color: #111;
 }
@@ -56,11 +56,11 @@ body {
 
 .content {
   max-width: 800px;
-  margin: 60px auto;      /* zentriert */
-  padding: 0 20px;        /* etwas Innenabstand */
-  text-align: left;       /* normaler Lesefluss */
-  font-size: 1.1rem;
+  margin: 60px auto;  /* ZENTRIERT */
+  padding: 0 20px;    /* linkes/rechtes Padding für angenehme Lesbarkeit */
   line-height: 1.7;
+  font-size: 1.1rem;
+  text-align: left;   /* normaler Lesefluss */
 }
 
 /* Mobile Ansicht */
