@@ -64,13 +64,13 @@ body {
 }
 
 .projekt-zitat {
-  font-size: 1.6rem;
-  font-style: italic;
+  font-size: 1.1rem;
+  font-style: normal;
   margin: 40px auto 20px;
   padding-left: 0;
   max-width: 800px;
   line-height: 1.4;
-  text-align: left;     /* linksbündig */
+  text-align: right;     
 }
 
 .projekt-zitat .autor {
