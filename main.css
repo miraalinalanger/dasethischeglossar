@@ -1,8 +1,5 @@
-@font-face {
-  font-family: "AetherMono";
-  src: url("fonts/AetherMono-A.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+body {
+  font-family: "Palatino Linotype", Palatino, serif;
 }
 
 /* Grundlayout */
