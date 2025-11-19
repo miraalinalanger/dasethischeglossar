@@ -63,20 +63,12 @@ body {
   text-align: left;   /* normaler Lesefluss */
 }
 
-.projekt-zitat {
-  font-size: 1.1rem;
-  font-style: normal;
-  margin: 40px auto 20px;
-  padding-left: 0;
-  max-width: 800px;
-  line-height: 1.4;
-  text-align: right;     
-}
-
-.projekt-zitat .autor {
-  font-size: 1rem;
-  font-style: normal;
-  color: #444;
+.projekt-epigraph {
+  text-align: right;         /* rechtsbündig */
+  margin-top: 20px;          /* guter Abstand zur H2 */
+  margin-bottom: 40px;       /* Abstand zum Fließtext */
+  font-size: 1.1rem;         /* gleiche Größe wie Fließtext */
+  line-height: 1.6;
 }
 
 /* Mobile Ansicht */
