@@ -32,4 +32,11 @@ Einen neuen Höhepunkt erlebte der Raubdruck mit der studentischen und linken Be
   </main>
 
 </body>
+
+<script>
+  if (localStorage.getItem("authenticated") !== "true") {
+    window.location.href = "password.html";
+  }
+</script>
+  
 </html>
