@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passwort</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    .box {
+      padding: 40px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Passwort eingeben</h2>
+    <input type="password" id="pw" placeholder="Passwort">
+    <button onclick="check()">Login</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+<script>
+  function check() {
+    const pass = "Schwarzermarkt";   // ← hier ändern
+    const input = document.getElementById("pw").value;
+
+    if (input === pass) {
+      localStorage.setItem("authenticated", "true");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("error").innerText = "Falsches Passwort";
+    }
+  }
+</script>
+
+</body>
+</html>
