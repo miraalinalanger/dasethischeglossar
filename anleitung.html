@@ -69,4 +69,10 @@
   </main>
 
 </body>
+<script>
+  if (localStorage.getItem("authenticated") !== "true") {
+    window.location.href = "password.html";
+  }
+</script>
+  
 </html>
