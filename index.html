@@ -8,7 +8,12 @@
 </head>
 
 <body>
+<script>
+  if (localStorage.getItem("authenticated") !== "true") {
+    window.location.href = "Passwort.html";
 
+  }
+</script>
   <!-- HEADER -->
   <header class="site-header">
     <h1 class="title">Das ethische Glossar</h1>
@@ -26,12 +31,5 @@
   </iframe>
 
 </body>
-
-<script>
-  if (localStorage.getItem("authenticated") !== "true") {
-    window.location.href = "Passwort.html";
-
-  }
-</script>
   
 </html>
