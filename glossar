@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossar – Das Ethische Glossar</title>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>DAS ETHISCHE GLOSSAR</h1>
+
+<div class="layout">
+    <nav>
+        <ul>
+            <li><a href="projekt.html">PROJEKT</a></li>
+            <li><a href="anleitung.html">ANLEITUNG</a></li>
+            <li><a href="glossar.html" class="active">GLOSSAR</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <iframe
+    class="doc-container"
+    src="https://docs.google.com/document/d/1ezZ6IMKI3Wcrq-Wh0ZTGlqniepIzWohm2nYnc5EXZUI/edit?rm=embedded">
+  </iframe>
+        
+    </main>
+</div>
+
+</body>
+</html>
