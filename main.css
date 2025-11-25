@@ -128,36 +128,13 @@ main p {
 
 
 /* Bild Startseite */
-body {
-    position: relative;
-    min-height: 100vh; /* Körper mindestens so hoch wie der Bildschirm */
-}
-
 .title-image {
-   position: absolute;
-    right: 20px;      /* weiter nach rechts */
-    bottom: 120px;    /* höher */
-    width: 320px;
+    position: absolute;
+    right: 40px;
+    top: 180px;
+    width: 330px;
     height: auto;
-    object-fit: cover;
 }
-
-/* Iframe position in the Glossar page */
-.doc-container {
-    width: 100%;
-    height: 85vh;
-    border: none;
-
-    /* Entfernt deine alte Einrückung */
-    margin-left: 0;
-
-    /* Sorgt dafür, dass er IMMER über die gesamte rechte Spalte geht */
-    grid-column: 2 / 3; 
-
-    /* Optional: sorgt für einen schöneren Look */
-    display: block;
-}
-
 /* Optional: im Responsive-Modus */
 @media (max-width: 768px) {
     .doc-container {
