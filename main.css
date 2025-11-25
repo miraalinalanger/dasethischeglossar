@@ -200,7 +200,7 @@ h1 a:hover {
     }
 
     nav a {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     /* Layout untereinander statt zweispaltig */
@@ -236,7 +236,28 @@ h1 a:hover {
     }
 
     .projekt-info {
-        font-size: 16px;
+        font-size: 11px;
         margin-bottom: 10px;
+    }
+}
+
+   h2 {
+        font-size: 26px;      /* vorher 36px */
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    main p,
+    .anleitung-list li {
+        font-size: 11px;      /* vorher 22px */
+        line-height: 1.45;
+    }
+
+    .anleitung-list {
+        margin-top: 10px;
+    }
+
+    .anleitung-list li {
+        padding-left: 18px;  /* etwas weniger Einzug */
     }
 }
