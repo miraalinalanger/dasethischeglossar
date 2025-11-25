@@ -6,7 +6,7 @@
 <title>Projekt – Das Ethische Glossar</title>
 <link rel="stylesheet" href="main.css?v=1.0.1">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
 
 </head>
 <body>
@@ -36,6 +36,8 @@
 
 <textarea id="editor"></textarea>
 
+<script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
+
 <script>
 tinymce.init({
   selector: '#editor',
@@ -45,31 +47,28 @@ tinymce.init({
   toolbar:
     'undo redo | bold italic underline | bullist numlist | link image table | fullscreen | code',
 
-  /* --- AUTOMATISCHES SPEICHERN --- */
+  /* --- AUTOSAVE MIT LOCALSTORAGE --- */
   setup: function (editor) {
 
-      // 1) Beim Laden: gespeicherten Text einfügen
+      // beim Start: gespeicherten Text laden
       editor.on('init', function () {
-          const savedContent = localStorage.getItem('projekt_text');
-          if (savedContent) {
-              editor.setContent(savedContent);
-          }
+          const saved = localStorage.getItem('projekt_text');
+          if (saved) editor.setContent(saved);
       });
 
-      // 2) Beim Tippen automatisch speichern
+      // automatisch speichern bei jedem Tippen
       editor.on('change keyup', function () {
           localStorage.setItem('projekt_text', editor.getContent());
       });
   },
 
-  /* MOBILE TOOLBAR */
   mobile: {
     menubar: false,
-    toolbar:
-      'undo redo | bold italic underline | bullist numlist | link'
+    toolbar: 'undo redo | bold italic underline | bullist numlist | link'
   }
 });
 </script>
+
 
 
   
