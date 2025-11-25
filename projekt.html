@@ -6,7 +6,6 @@
 <title>Projekt – Das Ethische Glossar</title>
 <link rel="stylesheet" href="main.css?v=1.0.1">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
 
 </head>
 <body>
@@ -35,44 +34,6 @@
 </div>
 
 <textarea id="editor"></textarea>
-
-<script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js"></script>
-
-<script>
-tinymce.init({
-  selector: '#editor',
-  height: 500,
-  menubar: false,
-
-  /* WICHTIG: Plugins erweitern */
-  plugins: 'lists link image table code fullscreen autosave toc',
-
-  /* TOOLBAR mit Überschriften + TOC */
-  toolbar:
-    'undo redo | styleselect | bold italic underline | bullist numlist | link image table | toc | fullscreen | code',
-
-  /* --- AUTOMATISCHES SPEICHERN --- */
-  setup: function (editor) {
-
-      editor.on('init', function () {
-          const saved = localStorage.getItem('projekt_text');
-          if (saved) editor.setContent(saved);
-      });
-
-      editor.on('change keyup', function () {
-          localStorage.setItem('projekt_text', editor.getContent());
-      });
-  },
-
-  /* MOBILE TOOLBAR */
-  mobile: {
-    menubar: false,
-    toolbar:
-      'undo redo | styleselect | bold italic underline | bullist numlist | link | toc'
-  }
-});
-</script>
-
 
 
   
