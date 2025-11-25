@@ -224,3 +224,26 @@ h1 a:hover {
         padding-left: 16px;
     }
 }
+
+
+
+/* Glossar: Hinweis standardmäßig verstecken */
+.mobile-doc-hinweis {
+    display: none;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.mobile-doc-hinweis a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Auf Handys anzeigen */
+@media (max-width: 768px) {
+    .mobile-doc-hinweis {
+        display: block;
+    }
+}
