@@ -141,27 +141,34 @@ main p {
     display: block;
 }
 
-/* Bild Startseite – FINAL */
+//* --- Bild + Text unten rechts --- */
+
 .image-wrapper {
     position: absolute;
     right: 40px;
     bottom: 40px;
-    width: 320px;            /* gleiche Breite wie Bild */
-    text-align: left;
+
+    /* DIESE ZEILE MACHT ES PERFEKT:
+       Breite des Containers richtet sich nach der Bildbreite */
+    width: 330px; 
 }
 
 .projekt-info {
     font-family: 'MinionVariable', serif;
     font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 12px;     /* Abstand zum Bild */
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+
+    /* Der Text soll GENAU so breit sein wie das Bild */
+    width: 100%;
 }
 
 .title-image {
-    width: 100%;             /* füllt Containerbreite */
+    width: 100%;     /* Bild füllt den Container */
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
+
 
 
 /* Link h1L */
