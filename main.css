@@ -142,26 +142,29 @@ main p {
 }
 
 /* Bild Startseite – FINAL */
-.title-image {
+.image-wrapper {
     position: absolute;
-    right: 40px;      /* Abstand vom rechten Rand */
-    bottom: 40px;     /* Abstand vom unteren Rand */
-    width: 320px;     /* Bildbreite */
-    height: auto;
-    object-fit: contain;
+    right: 40px;
+    bottom: 40px;
+    width: 320px;            /* gleiche Breite wie Bild */
+    text-align: left;
 }
 
 .projekt-info {
     font-family: 'MinionVariable', serif;
     font-size: 18px;
-    line-height: 1.45;
-    max-width: 600px;    /* gleiche Breite wie dein Content */
-    margin-left: 50px;   /* gleiche Linie wie dein Menü */
-    margin-top: 10px;
-    margin-bottom: 40px; /* Abstand zum Bild */
-    letter-spacing: -0.2px;
+    line-height: 1.4;
+    margin-bottom: 12px;     /* Abstand zum Bild */
 }
 
+.title-image {
+    width: 100%;             /* füllt Containerbreite */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Link h1L */
 h1 a {
     color: black;
     text-decoration: none;
