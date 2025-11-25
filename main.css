@@ -127,29 +127,12 @@ main p {
 
 
 
-/* Bild Startseite */
+/* Bild Startseite – FINAL */
 .title-image {
     position: absolute;
     right: 40px;      /* Abstand vom rechten Rand */
     bottom: 40px;     /* Abstand vom unteren Rand */
-    width: 320px;     /* Bildbreite – wie im Screenshot */
-    height: auto;     /* Höhe automatisch */
+    width: 320px;     /* Bildbreite */
+    height: auto;
     object-fit: contain;
-    z-index: -1;      /* Damit es hinter dem Menü bleibt */
-}
-
-/* Auf kleineren Displays Bild kleiner + etwas höher */
-@media (max-width: 1200px) {
-    .title-image {
-        width: 260px;
-        bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .title-image {
-        position: static;  /* Bild wandert in den normalen Flow */
-        width: 100%;
-        margin-top: 40px;
-    }
 }
