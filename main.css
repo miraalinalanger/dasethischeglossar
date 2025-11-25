@@ -230,10 +230,12 @@ h1 a:hover {
 /* Glossar: Hinweis standardmäßig verstecken */
 .mobile-doc-hinweis {
     display: none;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'MinionVariable', serif; /* gleiche Schrift wie p */
+    font-style: italic;                  /* kursiv */
     font-size: 16px;
     margin-bottom: 15px;
     color: black;
+    line-height: 1.45;
 }
 
 .mobile-doc-hinweis a {
@@ -242,7 +244,7 @@ h1 a:hover {
 }
 
 /* Auf Handys anzeigen */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .mobile-doc-hinweis {
         display: block;
     }
