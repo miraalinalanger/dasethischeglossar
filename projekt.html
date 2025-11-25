@@ -43,28 +43,32 @@ tinymce.init({
   selector: '#editor',
   height: 500,
   menubar: false,
-  plugins: 'lists link image table code fullscreen autosave',
-  toolbar:
-    'undo redo | bold italic underline | bullist numlist | link image table | fullscreen | code',
 
-  /* --- AUTOSAVE MIT LOCALSTORAGE --- */
+  /* WICHTIG: Plugins erweitern */
+  plugins: 'lists link image table code fullscreen autosave toc',
+
+  /* TOOLBAR mit Überschriften + TOC */
+  toolbar:
+    'undo redo | styleselect | bold italic underline | bullist numlist | link image table | toc | fullscreen | code',
+
+  /* --- AUTOMATISCHES SPEICHERN --- */
   setup: function (editor) {
 
-      // beim Start: gespeicherten Text laden
       editor.on('init', function () {
           const saved = localStorage.getItem('projekt_text');
           if (saved) editor.setContent(saved);
       });
 
-      // automatisch speichern bei jedem Tippen
       editor.on('change keyup', function () {
           localStorage.setItem('projekt_text', editor.getContent());
       });
   },
 
+  /* MOBILE TOOLBAR */
   mobile: {
     menubar: false,
-    toolbar: 'undo redo | bold italic underline | bullist numlist | link'
+    toolbar:
+      'undo redo | styleselect | bold italic underline | bullist numlist | link | toc'
   }
 });
 </script>
