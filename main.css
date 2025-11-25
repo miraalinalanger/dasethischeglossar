@@ -72,10 +72,11 @@ margin-left: 10px;
 
 /* Unterseite */
 
+/* DESKTOP LAYOUT */
 .layout {
     display: grid;
-    grid-template-columns: 250px 1fr; /* Links Menü, rechts Inhalt */
-    column-gap: 240px; /* Abstand zwischen Menü und Inhalt */
+    grid-template-columns: 250px 1fr; 
+    column-gap: 240px;
     align-items: start;
 }
 
@@ -178,3 +179,53 @@ h1 a:hover {
     text-decoration: none;
 }
 
+/* --- MOBILE BREAKPOINT --- */
+@media (max-width: 768px) {
+
+    body {
+        margin: 20px;
+    }
+
+    .layout {
+        display: block;   /* Grid wird ausgeschaltet */
+    }
+
+    nav ul li {
+        padding-left: 0;
+        margin-bottom: 8px;
+    }
+
+    nav a {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 0;
+        margin-top: 30px;   /* Abstand unter dem Menü */
+        max-width: 100%;
+    }
+
+    /* Iframe soll volle Breite haben */
+    .doc-container {
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* Startseitenbild Verhalten */
+    .start-container {
+        position: static;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .title-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .projekt-info {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
