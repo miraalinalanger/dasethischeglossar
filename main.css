@@ -125,7 +125,21 @@ main p {
     top: 0;
 }
 
+/* Iframe position in the Glossar page */
+.doc-container {
+    width: 100%;
+    height: 85vh;
+    border: none;
 
+    /* Entfernt deine alte Einrückung */
+    margin-left: 0;
+
+    /* Sorgt dafür, dass er IMMER über die gesamte rechte Spalte geht */
+    grid-column: 2 / 3; 
+
+    /* Optional: sorgt für einen schöneren Look */
+    display: block;
+}
 
 /* Bild Startseite – FINAL */
 .title-image {
