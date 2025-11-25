@@ -34,18 +34,35 @@
     </main>
 </div>
 
-<textarea id="editor">
-    Schreibe hier deinen Text...
-</textarea>
+<textarea id="editor"></textarea>
 
-  <script>
+<script>
 tinymce.init({
   selector: '#editor',
   height: 500,
   menubar: false,
-  plugins: 'lists link image table code fullscreen',
+  plugins: 'lists link image table code fullscreen autosave',
   toolbar:
     'undo redo | bold italic underline | bullist numlist | link image table | fullscreen | code',
+
+  /* --- AUTOMATISCHES SPEICHERN --- */
+  setup: function (editor) {
+
+      // 1) Beim Laden: gespeicherten Text einfügen
+      editor.on('init', function () {
+          const savedContent = localStorage.getItem('projekt_text');
+          if (savedContent) {
+              editor.setContent(savedContent);
+          }
+      });
+
+      // 2) Beim Tippen automatisch speichern
+      editor.on('change keyup', function () {
+          localStorage.setItem('projekt_text', editor.getContent());
+      });
+  },
+
+  /* MOBILE TOOLBAR */
   mobile: {
     menubar: false,
     toolbar:
@@ -53,6 +70,7 @@ tinymce.init({
   }
 });
 </script>
+
 
   
 </body>
