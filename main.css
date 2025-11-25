@@ -179,77 +179,18 @@ h1 a:hover {
     text-decoration: none;
 }
 
-/* --- MOBILE RESPONSIVE LAYOUT --- */
+/* Responsive */
 @media (max-width: 768px) {
 
-    /* Body-Abstand kleiner */
-    body {
-        margin: 20px;
-    }
-
-    /* H1 etwas kleiner */
-    h1 {
+    h2 {
         font-size: 26px;
-        margin-bottom: 20px;
-    }
-
-    /* Menü kleiner und ohne linken Einzug */
-    nav ul li {
-        padding-left: 0;
-        margin-bottom: 6px;
-    }
-
-    nav a {
-        font-size: 16px;
-    }
-
-    /* Layout untereinander statt zweispaltig */
-    .layout {
-        display: block;      /* Grid AUS! */
-    }
-
-    /* Inhalt nimmt komplette Breite */
-    main {
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 20px;
-    }
-
-    /* Iframe auf volle Breite */
-    .doc-container {
-        width: 100%;
-        height: 70vh;
-    }
-
-    /* Startbild + Text für index.html */
-    .start-container,
-    .image-wrapper {
-        position: static;   /* NICHT mehr rechts unten fixiert */
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .title-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .projekt-info {
-        font-size: 11px;
-        margin-bottom: 10px;
-    }
-}
-
-   h2 {
-        font-size: 26px;      /* vorher 36px */
         line-height: 1.25;
         margin-bottom: 20px;
     }
 
     main p,
     .anleitung-list li {
-        font-size: 11px;      /* vorher 22px */
+        font-size: 11px;
         line-height: 1.45;
     }
 
@@ -258,6 +199,6 @@ h1 a:hover {
     }
 
     .anleitung-list li {
-        padding-left: 18px;  /* etwas weniger Einzug */
+        padding-left: 18px;
     }
 }
