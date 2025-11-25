@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projekt</title>
-<link rel="stylesheet" href="main.css?v=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projekt – Das Ethische Glossar</title>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <script>
   if (localStorage.getItem("authenticated") !== "true") {
     window.location.href = "Passwort.html";
 
   }
-</script>
-  <!-- HEADER -->
-  <header class="site-header">
-    <h1 class="title">Das ethische Glossar</h1>
+<h1>DAS ETHISCHE GLOSSAR</h1>
 
-    <nav class="top-nav">
-      <a href="index.html">Glossar</a>
-      <a href="anleitung.html">Anleitung</a>
+<div class="layout">
+    <nav>
+        <ul>
+<li><a href="projekt.html" class="active">PROJEKT</a></li>
+<li><a href="anleitung.html">ANLEITUNG</a></li>
+<li><a href="glossar.html">GLOSSAR</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <p class="projekt-epigraph">
-  Bücher verlangen Taten.<br>
-  – Heinrich Mann, 1919*
-</p>
-    <h2>Schwarzer Markt für rote Bücher</h2>
-    <p>  Initiiert von Annette Gilbert, sind Kolleg:innen verschiedener Universitäten (Berlin, Marburg, Augsburg und Bremen) im Projekt "Schwarzer Markt für rote Bücher" im Wintersemester 25_26 eingeladen, sich mit “einer ‚alternativen‘ Form der Literatur- und Buchproduktion: dem Raub- bzw. Nachdruck, der ohne Wissen oder Erlaubnis der Autor:innen bzw. Verlage erfolgt. Es gibt ihn seit Erfindung des Buchdrucks, v.a. Bestseller-Autoren hatten damit zu kämpfen, darunter Luther, Grimmelshausen, Klopstock, Goethe, Wilhelm Busch oder Karl May. 
-Einen neuen Höhepunkt erlebte der Raubdruck mit der studentischen und linken Bewegung Ende der 1960er Jahre. Im Zentrum stand der Kampf gegen das Urheberrecht, das als überkommenes Relikt einer bürgerlichen Epoche galt, wie es sich exemplarisch im Namen des Raubdruckverlags „Zerschlagt das bürgerliche Copyright“ zeigt. Der Idee des Privateigentums setzten die Raubdrucker mit ihren ‚sozialisierten Drucken‘ die Idee eines Kollektiveigentums entgegen.”* Annette Gilbert
-</p>
-  </main>
+    <main>
+        <h2>SCHWARZER MARKT FÜR ROTE BÜCHER</h2>
+        <p>Initiiert von Annette Gilbert, sind Kolleg:innen verschiedener Universitäten (Berlin, Marburg, Augsburg und Bremen) im Projekt "Schwarzer Markt für rote Bücher" im Wintersemester 25/26 eingeladen, sich mit “einer ‚alternativen‘ Form der Literatur- und Buchproduktion: dem Raub- bzw. Nachdruck, der ohne Wissen oder Erlaubnis der Autor:innen bzw. Verlage erfolgt. Es gibt ihn seit Erfindung des Buchdrucks, v.a. Bestseller-Autoren hatten damit zu kämpfen, darunter Luther, Grimmelshausen, Klopstock, Goethe, Wilhelm Busch oder Karl May. Einen neuen Höhepunkt erlebte der Raubdruck mit der studentischen und linken Bewegung Ende der 1960er Jahre. Im Zentrum stand der Kampf gegen das Urheberrecht, das als überkommenes Relikt einer bürgerlichen Epoche galt, wie es sich exemplarisch im Namen des Raubdruckverlags „Zerschlagt das bürgerliche Copyright“ zeigt. Der Idee des Privateigentums setzten die Raubdrucker mit ihren ‚sozialisierten Drucken‘ die Idee eines Kollektiveigentums entgegen.”* <br> *Annette Gilbert</p>
+    </main>
+</div>
 
 </body>
-  
 </html>
