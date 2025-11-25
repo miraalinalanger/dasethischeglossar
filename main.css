@@ -1,93 +1,168 @@
-body {
-  font-family: "Palatino Linotype", Palatino, serif;
-}
-
-/* Grundlayout */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+@font-face {
+font-family: 'MinionVariable';
+src: url('MinionVariableConcept-Regular.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
 }
 
 body {
-  font-family: "Palatino Linotype", Palatino, serif;
-  background-color: #fff;
-  color: #111;
+font-family: 'MinionVariable', serif;
+margin: 40px;
+padding: 0;
 }
 
-/* Header */
-.site-header {
-  text-align: center;
-  padding: 40px 20px;
-  position: relative;   /* WICHTIG: kein absolute */
-  z-index: 10;
+h1 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
-.title {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: normal;
+nav ul {
+    list-style: none; /* Bullet Points entfernen */
+    padding: 0;
+    margin: 0;
+} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Navigation rechts oben */
-.top-nav {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 20;
+nav ul li {
+    margin-bottom: 10px;
+    padding-left: 50px;
 }
 
-.top-nav a {
-  margin-left: 20px;
-  text-decoration: underline;
-  font-size: 1rem;
-  color: #111;
+main {
+    margin-top: 0; /* Wichtig: kein extra Abstand */
 }
 
-/* GOOGLE DOC iframe */
+nav a {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0;
+}
+
+nav a.active {
+text-decoration: underline;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+body {
+margin: 20px;
+}
+h1 {
+font-size: 34px;
+}
+nav a {
+font-size: 26px;
+margin-left: 10px;
+}
+}
+
+
+/* Unterseite */
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Links Menü, rechts Inhalt */
+    column-gap: 240px; /* Abstand zwischen Menü und Inhalt */
+    align-items: start;
+}
+
+main {
+    margin: 0;
+    padding-left: 120px;
+    padding-right: 40px; /* etwas Luft zum rechten Rand */
+    max-width: 100%;      /* Text darf volle Breite nutzen */
+}
+
+main h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+}
+
+main p {
+    font-family: 'MinionVariable', serif;
+    font-size: 22px;
+    line-height: 1.55;
+    max-width: none; /* keine künstliche Begrenzung */
+}
+
+/* Unterseite Anleitung */
+
+.anleitung-list {
+    list-style: none;              /* Standardpunkte entfernen */
+    margin: 0;
+    padding: 0;
+    font-family: 'MinionVariable', serif;
+    font-size: 22px;
+    line-height: 1.55;
+}
+
+.anleitung-list li {
+    position: relative;
+    padding-left: 22px;            /* Abstand für den Spiegelstrich */
+    margin-bottom: 8px;
+    letter-spacing: -0.25px;
+}
+
+.anleitung-list li::before {
+    content: "–";                  /* Spiegelstrich */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+/* Bild Startseite */
+body {
+    position: relative;
+    min-height: 100vh; /* Körper mindestens so hoch wie der Bildschirm */
+}
+
+.startbild {
+    position: absolute;
+    right: 20px;      /* weiter nach rechts */
+    bottom: 120px;    /* höher */
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Iframe position in the Glossar page */
 .doc-container {
-  width: 100vw;                    /* volle Breite */
-  height: calc(100vh - 160px);     /* volle Höhe minus Header */
-  border: none;
-  display: block;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    height: 85vh;
+    border: none;
+
+    /* Entfernt deine alte Einrückung */
+    margin-left: 0;
+
+    /* Sorgt dafür, dass er IMMER über die gesamte rechte Spalte geht */
+    grid-column: 2 / 3; 
+
+    /* Optional: sorgt für einen schöneren Look */
+    display: block;
 }
 
-.content {
-  max-width: 800px;
-  margin: 60px auto;  /* ZENTRIERT */
-  padding: 0 20px;    /* linkes/rechtes Padding für angenehme Lesbarkeit */
-  line-height: 1.7;
-  font-size: 1.1rem;
-  text-align: left;   /* normaler Lesefluss */
-}
-
-.projekt-epigraph {
-  text-align: right;         /* rechtsbündig */
-  margin-top: 20px;          /* guter Abstand zur H2 */
-  margin-bottom: 40px;       /* Abstand zum Fließtext */
-  font-size: 1.1rem;         /* gleiche Größe wie Fließtext */
-  line-height: 1.6;
-}
-
-/* Mobile Ansicht */
-@media (max-width: 700px) {
-  .top-nav {
-    position: static;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .top-nav a {
-    margin: 0 10px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .doc-container {
-    height: calc(100vh - 200px); /* etwas mehr Platz für Header auf Mobil */
-  }
+/* Optional: im Responsive-Modus */
+@media (max-width: 768px) {
+    .doc-container {
+        margin-left: 0;
+        width: 100%;
+        height: 70vh;
+    }
 }
