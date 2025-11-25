@@ -133,8 +133,8 @@ body {
     min-height: 100vh; /* Körper mindestens so hoch wie der Bildschirm */
 }
 
-.startbild {
-    position: absolute;
+.title-image {
+   position: absolute;
     right: 20px;      /* weiter nach rechts */
     bottom: 120px;    /* höher */
     width: 320px;
