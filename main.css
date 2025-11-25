@@ -181,17 +181,22 @@ h1 a:hover {
         height: 70vh;
     }
 
-    .start-container,
-    .image-wrapper {
-        position: static;
-        width: 100%;
-        margin-top: 20px;
+      /* Container wieder fix nach unten rechts setzen */
+    .start-container {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: 200px;       /* <<< Bild + Text-Breite */
+        text-align: left;
     }
 
+    /* Bild kleiner skalieren */
     .title-image {
-        width: 100%;
+        width: 200px;       /* <<< gewünschte Bild-Breite */
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
+        display: block;
+        margin-top: 10px;   /* etwas Abstand unter dem Text */
     }
 
     .projekt-info {
