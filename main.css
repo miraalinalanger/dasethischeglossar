@@ -161,6 +161,11 @@ h1 a:hover {
         margin-bottom: 6px;
     }
 
+    /* MOBILE NAVIGATION */
+    nav a {
+        font-size: 20px;   /* <<< NAV auf Mobile */
+    }
+
     .layout {
         display: block;
     }
@@ -194,23 +199,22 @@ h1 a:hover {
         margin-bottom: 10px;
     }
 
-        /* ------------------------------ */
-    /* Mobile Schriftgrößen – NEU     */
-    /* ------------------------------ */
-
-    h2 {
-        font-size: 20px;      /* vorher 26 → JETZT mobile-optimal */
+    /* MOBILE HEADLINE 2 */
+    h2,
+    main h2 {               /* wichtig für Spezifität */
+        font-size: 20px;
         line-height: 1.25;
         margin-bottom: 16px;
     }
 
+    /* MOBILE TEXT */
     main p {
-        font-size: 14px;      /* vorher 16 → schmaler, lesbarer */
+        font-size: 14px;
         line-height: 1.45;
     }
 
     .anleitung-list li {
-        font-size: 14px;      /* analog zu p */
+        font-size: 14px;
         line-height: 1.45;
         padding-left: 16px;
     }
